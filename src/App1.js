@@ -1,4 +1,4 @@
-// import './App.css'
+import './App.css'
 import HomePage from './pages/HomePage.js';
 import AboutPage from './pages/AboutPage.js';
 import ArticlesPage from './pages/ArticlesPage.js';
@@ -9,8 +9,9 @@ import NavBar from './NavBar.js';
 const App = () => { 
     return (
         <BrowserRouter>
+            <div class="App">
             <NavBar />
-            <div className="App">
+            <div id="page-body">
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
@@ -18,7 +19,8 @@ const App = () => {
                     <Route path="/articles/:articleId" element={<ArticlesPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>
-            </div>
+                </div>
+                </div>
             </BrowserRouter>
         
     );
